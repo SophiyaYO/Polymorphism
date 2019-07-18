@@ -20,7 +20,7 @@ public abstract class Shape {
         this.area = area;
     }
 
-    abstract double calculatePerimeter();
+    public abstract double calculatePerimeter();
 
-    abstract double calculateArea();
+    public abstract double calculateArea();
 }

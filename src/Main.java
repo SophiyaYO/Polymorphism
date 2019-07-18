@@ -1,4 +1,6 @@
-package shape;
+import shape.Circle;
+import shape.Rectangle;
+import shape.Shape;
 
 import java.util.ArrayList;
 import java.util.List;

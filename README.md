@@ -50,6 +50,12 @@ You won` t need any special software, these are problems which helps you acquain
   :point_right: _getRadius should be public **final Double** getRadius_ :hocho:
   </details>
  
-
+ <details>
+ <summary>03. Animals</summary>
+ 
+  - This is the [Description :scroll:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/animal/DESCRIPTION.md#math-operation)
+  - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/animal)
+  
+  </details>
  
  ****

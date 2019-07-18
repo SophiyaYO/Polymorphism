@@ -36,19 +36,19 @@ You won` t need any special software, these are problems which helps you acquain
  <summary>02. Shapes</summary>
  
   - This is the [Description :scroll:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/shape/DESCRIPTION.md#math-operation)
- 
   - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/shape)
   
+  ### _Tips :collision: :_
+  
+  **Be careful:**
+  
+  :point_right: _use Wrapper class Double_
+  
+  :point_right: _set`s should be protected_ 
+  
+  :point_right: _getRadius should be public **final Double** getRadius_ :hocho:
   </details>
  
-###>_Tips :collision: :_
 
-Be careful:
-
-:point_right: use Wrapper class Double
-
-:point_right: set`s should be protected
-
-:point_right: getRadius should be :hocho: public **final Double** getRadius 
  
  ****

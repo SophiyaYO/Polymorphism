@@ -15,3 +15,19 @@ You won` t need any special software, these are problems which helps you acquain
 > - ***A path where you can find the exact solution for every problem in these repository***
 > - ***Here you can read if there was any problem met or one that you would deal with***
 > - ***Some tips and tricks if I know of 😆***
+
+
+******************
+***************
+
+## LAB Problems
+****************
+
+<details>
+<summary>01. Math Operation</summary>
+
+ - (Description :scroll:)[src/mathOperations/DESCRIPTION.md]
+
+ - (Solution :cherries:)[Polymorphism/src/mathOperations/]
+ 
+ </details>

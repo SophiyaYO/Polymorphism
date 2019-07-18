@@ -12,16 +12,17 @@ Create class hierarchy, starting with **abstract class Shape**:
      - calculatePerimeter\()
      - calculateArea\()
 
-- **Extend Shape class with two children:**
-    - Rectangle
-    - Circle
+ **Extend Shape class with two children:**
+    - **_Rectangle_**
+    - **_Circle_**
+    
 - **Each of them needs to have:**
     - Fields: 
 - **For Rectangle**
-    - height : Double
-    - width : Double 
+        - height : Double
+        - width : Double 
 - **For Circle**
-    - radius : Double
+        - radius : Double
 - **Encapsulation for this fields**
 - **Public constructor** 
 - **Concrete methods for calculations \(perimeter and area)**

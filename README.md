@@ -53,9 +53,15 @@ You won` t need any special software, these are problems which helps you acquain
  <details>
  <summary>03. Animals</summary>
  
-  - This is the [Description :scroll:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/animal/DESCRIPTION)
+  - This is the [Description :scroll:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/animal/DESCRIPTION.md#math-operation)
   - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/animal)
   
   </details>
  
- ****
+ ******************
+ ***************
+ 
+ ## EXERCISE Problems
+ 
+ ****************
+ ****************

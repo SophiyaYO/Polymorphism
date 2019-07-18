@@ -6,7 +6,7 @@ Create a class **MathOperation**, which should have method **add\(\)**. Method a
 You should be able to use the class like this:
 
 ````java
-public class mathOperations.Main {
+public class mathOperations.shape.Main {
     public static void main(String[] args) {
         MathOperation math = new MathOperation();
         System.out.println(math.add(2, 2));

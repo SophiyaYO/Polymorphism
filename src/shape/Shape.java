@@ -8,7 +8,7 @@ public abstract class Shape {
         return this.perimeter;
     }
 
-    public void setPerimeter(double perimeter) {
+    protected void setPerimeter(double perimeter) {
         this.perimeter = perimeter;
     }
 
@@ -20,7 +20,7 @@ public abstract class Shape {
         this.area = area;
     }
 
-    abstract double calculatePerimeter();
+    protected abstract void calculatePerimeter();
 
-     abstract double calculateArea();
+    protected abstract void calculateArea();
 }

@@ -21,6 +21,8 @@ You won` t need any special software, these are problems which helps you acquain
 ***************
 
 ## LAB Problems
+
+****************
 ****************
 
 <details>
@@ -39,12 +41,11 @@ You won` t need any special software, these are problems which helps you acquain
   - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/shape)
   
   ### _Tips :collision: :_
-  
-  **Be careful:**
+
   
   :point_right: _use Wrapper class Double_
   
-  :point_right: _set`s should be protected_ 
+  :point_right: _sets should be protected_ 
   
   :point_right: _getRadius should be public **final Double** getRadius_ :hocho:
   </details>

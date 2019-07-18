@@ -1,15 +1,13 @@
 # **POLYMORPHISM**
 *****
 
-Problem solutions from course Java OOP<sub>***First but not least drink some 🍺***</sub>
-
+Problem solutions from course Java OOP<sub>***First but not least drink some***</sub> **🍺**
 
 ************
 
 ## **Prerequisites**
 
-You won` t need any special software, these are problems which helps you acquaint with the Basic OOP with Java
-Personally I am using IntelliJ IDEA
+You won` t need any special software, these are problems which helps you acquaint with the Basic OOP in Java
 
 ### *In this file you will find:*
 

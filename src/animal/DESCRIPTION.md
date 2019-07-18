@@ -28,7 +28,7 @@ public class Main {
 
 | Input	| Output |
 | --- | --- |
-I am Oscar and my favourite food is Whiskas
+|| I am Oscar and my favourite food is Whiskas |
 || MEEOW |
 || I am Rocky and my favourite food is Meat |
 || DJAAF |

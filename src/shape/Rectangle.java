@@ -26,12 +26,12 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    double calculatePerimeter() {
+   public double calculatePerimeter() {
         return 2 * this.getWidth() + 2*this.getHeight();
     }
 
     @Override
-    double calculateArea() {
+   public double calculateArea() {
         return this.getWidth() * this.getHeight();
     }
 }

@@ -26,8 +26,8 @@ You won` t need any special software, these are problems which helps you acquain
 <details>
 <summary>01. Math Operation</summary>
 
- - (Description :scroll:)[src/mathOperations/DESCRIPTION.md]
+ - (Description :scroll:)[https://github.com/SophiyaYO/Polymorphism/blob/master/src/mathOperations/DESCRIPTION.md#math-operation]
 
- - (Solution :cherries:)[Polymorphism/src/mathOperations/]
+ - (Solution :cherries:)[https://github.com/SophiyaYO/Polymorphism/blob/master/src/mathOperations/MathOperation.java]
  
  </details>

@@ -1,9 +1,9 @@
 # **POLYMORPHISM**
 *****
 
-Problem solutions from course Java OOP<sub>First but not least drink some 🍺</sub>
+Problem solutions from course Java OOP<sub>***First but not least drink some 🍺***</sub>
 
-<sub>First but not least drink some 🍺</sub>
+
 ************
 
 ## **Prerequisites**
@@ -11,7 +11,7 @@ Problem solutions from course Java OOP<sub>First but not least drink some 🍺</
 You won` t need any special software, these are problems which helps you acquaint with the Basic OOP with Java
 Personally I am using IntelliJ IDEA
 
-## *In this file you will find:*
+### *In this file you will find:*
 
 > - **_***A path to description file where you can acquaint with the terms of every given problem***_**
 > - ***A path where you can find the exact solution for every problem in these repository***

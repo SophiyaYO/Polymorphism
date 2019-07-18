@@ -1,7 +1,7 @@
 # **POLYMORPHISM**
 *****
 
-Problem solutions from course Java OOP<sub>***First but not least drink some***</sub> **🍺**
+Problem solutions from course Java OOP<sup>***First but not least drink some***</sup> **🍺**
 
 ************
 

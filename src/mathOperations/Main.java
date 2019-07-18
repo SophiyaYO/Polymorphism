@@ -1,4 +1,4 @@
-import mathOperations.MathOperation;
+package mathOperations;
 
 public class Main {
     public static void main(String[] args) {

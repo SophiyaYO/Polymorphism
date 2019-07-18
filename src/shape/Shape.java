@@ -5,7 +5,7 @@ public abstract class Shape {
     private double area;
 
     public double getPerimeter() {
-        return perimeter;
+        return this.perimeter;
     }
 
     public void setPerimeter(double perimeter) {
@@ -13,7 +13,7 @@ public abstract class Shape {
     }
 
     public double getArea() {
-        return area;
+        return this.area;
     }
 
     public void setArea(double area) {

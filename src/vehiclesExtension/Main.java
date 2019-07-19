@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Main {
@@ -19,7 +20,7 @@ public class Main {
         Vehicle truck = produceVehicle(reader.readLine().split("\\s+"));
         Vehicle bus = produceVehicle(reader.readLine().split("\\s+"));
 
-        Map<String, Vehicle> vehicles = new HashMap<>();
+        Map<String, Vehicle> vehicles = new LinkedHashMap<>();
 
         vehicles.putIfAbsent("Car", car);
         vehicles.putIfAbsent("Truck", truck);
@@ -32,7 +33,8 @@ public class Main {
 
             String output = null;
             if (tokens[0].equalsIgnoreCase("drive")) {
-
+                vehicles.get(tokens[1]).setAirConditionIsOn(tokens[0]);
+                vehicles.get(tokens[1]).setFuelConsumption(vehicles.get(tokens[1]).fuelConsumption);
                 output = vehicles
                         .get(tokens[1])
                         .drivenDistance(Double.parseDouble(tokens[2]));
@@ -41,6 +43,8 @@ public class Main {
                 vehicles.get(tokens[1]).refueledLiters(Double.parseDouble(tokens[2]));
 
             } else if (tokens[0].equalsIgnoreCase("driveEmpty")) {
+                vehicles.get(tokens[1]).setAirConditionIsOn(tokens[0]);
+                vehicles.get(tokens[1]).setFuelConsumption(vehicles.get(tokens[1]).fuelConsumption);
                 output = vehicles
                         .get(tokens[1])
                         .drivenDistance(Double.parseDouble(tokens[2]));
@@ -69,7 +73,7 @@ public class Main {
                             Double.parseDouble(data[2]),
                             Double.parseDouble(data[3]),
                             data[0]
-                            );
+                    );
 
         } else if (data[0].equalsIgnoreCase("truck")) {
             vehicle =

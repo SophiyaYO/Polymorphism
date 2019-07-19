@@ -4,11 +4,28 @@ import java.text.DecimalFormat;
 
 public abstract class Vehicle {
     private double fuelQuantity;
+    private boolean airConditionIsOn;
     private double fuelConsumption;
+    private double additionalConsumption;
 
-    protected Vehicle(double fuelQuantity, double fuelConsumption) {
+    protected Vehicle(double fuelQuantity, double fuelConsumption
+            , double additionalConsumption) {
         this.fuelQuantity = fuelQuantity;
-        this.fuelConsumption = fuelConsumption;
+        this.setAirConditionIsOn();
+        this.additionalConsumption = additionalConsumption;
+        this.setFuelConsumption(fuelConsumption);
+    }
+
+    protected void setFuelConsumption(double fuelConsumption) {
+        if (airConditionIsOn) {
+            this.fuelConsumption = fuelConsumption + additionalConsumption;
+        } else {
+            this.fuelConsumption = fuelConsumption;
+        }
+    }
+
+    private void setAirConditionIsOn() {
+        this.airConditionIsOn = true;
     }
 
     public double getFuelQuantity() {
@@ -16,7 +33,7 @@ public abstract class Vehicle {
     }
 
     public String drivenDistance(double distance) {
-        String output = null;
+        String output;
 
         double fuelNeeded = distance * this.fuelConsumption;
 

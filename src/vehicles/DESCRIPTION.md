@@ -18,7 +18,7 @@ Write a program that models 2 vehicles \(Car and Truck) and will be able to simu
 
 After each Drive command print whether the Car/Truck was able to travel given distance in format if it’s successful. Print the distance with two digits after the decimal separator except trailing zeros. Use the DecimalFormat class:
 
->>>"Car/Truck travelled {distance} km"
+>"Car/Truck travelled {distance} km"
 
 Or if it is not:
 

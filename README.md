@@ -71,6 +71,6 @@ You won` t need any special software, these are problems which helps you acquain
  
   - This is the [Description :scroll:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehicles/DESCRIPTION.md#math-operation)
  
-  - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehicles/MathOperation.java)
+  - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehicles)
   
   </details>

@@ -32,22 +32,23 @@ public class Main {
 
             String output = null;
             if (tokens[0].equalsIgnoreCase("drive")) {
+
                 output = vehicles
                         .get(tokens[1])
                         .drivenDistance(Double.parseDouble(tokens[2]));
-
 
             } else if (tokens[0].equalsIgnoreCase("refuel")) {
                 vehicles.get(tokens[1]).refueledLiters(Double.parseDouble(tokens[2]));
 
             } else if (tokens[0].equalsIgnoreCase("driveEmpty")) {
-                vehicles.get(tokens[1]).setAirConditionIsOn();
+                output = vehicles
+                        .get(tokens[1])
+                        .drivenDistance(Double.parseDouble(tokens[2]));
             }
 
             if (output != null) {
                 System.out.println(output);
             }
-
 
         }
 
@@ -66,7 +67,8 @@ public class Main {
                     new Car(
                             Double.parseDouble(data[1]),
                             Double.parseDouble(data[2]),
-                            Double.parseDouble(data[3])
+                            Double.parseDouble(data[3]),
+                            data[0]
                             );
 
         } else if (data[0].equalsIgnoreCase("truck")) {
@@ -74,15 +76,18 @@ public class Main {
                     new Truck(
                             Double.parseDouble(data[1]),
                             Double.parseDouble(data[2]),
-                            Double.parseDouble(data[3])
-                           );
+                            Double.parseDouble(data[3]),
+                            data[0]
+                    );
 
         } else if (data[0].equalsIgnoreCase("Bus")) {
             vehicle =
                     new Bus(Double.parseDouble(data[1]),
                             Double.parseDouble(data[2]),
-                            Double.parseDouble(data[3])
-                           );
+                            0d,
+                            Double.parseDouble(data[3]),
+                            data[0]
+                    );
         }
 
         return vehicle;

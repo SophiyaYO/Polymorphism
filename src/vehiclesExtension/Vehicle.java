@@ -4,25 +4,27 @@ import java.text.DecimalFormat;
 
 public abstract class Vehicle {
     private double fuelQuantity;
-    private boolean airConditionIsOn;
-    private double fuelConsumption;
+    public boolean airConditionIsOn;
+    protected double fuelConsumption;
     private double additionalConsumption;
     private double tankCapacity;
 
     protected Vehicle(double fuelQuantity, double fuelConsumption
-            , double additionalConsumption, double tankCapacity) {
+            , double additionalConsumption, double tankCapacity, String drive) {
 
         this.setFuelQuantity(fuelQuantity);
-        this.setAirConditionIsOn();
+        this.setAirConditionIsOn(drive);
         this.additionalConsumption = additionalConsumption;
         this.setFuelConsumption(fuelConsumption);
         this.tankCapacity = tankCapacity;
     }
 
     public void setFuelQuantity(double fuelQuantity) {
-        this.fuelQuantity = fuelQuantity;
-
-
+        if (fuelQuantity >= 0) {
+            this.fuelQuantity = fuelQuantity;
+        } else {
+            System.out.println(("Fuel must be a positive number"));
+        }
     }
 
     protected void setFuelConsumption(double fuelConsumption) {
@@ -33,8 +35,13 @@ public abstract class Vehicle {
         }
     }
 
-    public void setAirConditionIsOn() {
-        this.airConditionIsOn = true;
+    protected void setAirConditionIsOn(String drive) {
+        if (drive.equalsIgnoreCase("drive")) {
+            this.airConditionIsOn = true;
+        } else {
+            this.airConditionIsOn = false;
+
+        }
     }
 
     public double getFuelQuantity() {
@@ -65,15 +72,11 @@ public abstract class Vehicle {
 
     public void refueledLiters(double fuel) {
         if (this.fuelQuantity + fuel <= this.tankCapacity) {
-            if (fuel > 0) {
-                this.fuelQuantity += fuel;
-            } else {
-                System.out.println(("Fuel must be a positive number"));
-            }
-
+            this.fuelQuantity += fuel;
         } else {
             System.out.println(("Cannot fit fuel in tank"));
         }
+
     }
 
     @Override

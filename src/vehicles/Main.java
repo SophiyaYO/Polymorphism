@@ -19,6 +19,7 @@ public class Main {
         Vehicle car = new Car(Double.parseDouble(carInfo[1]), Double.parseDouble(carInfo[2]));
         Vehicle truck = new Truck(Double.parseDouble(carInfo[1]), Double.parseDouble(carInfo[2]));
 
-
+        System.out.println(car.drivenDistance(9));
+        System.out.println(truck.drivenDistance(10));
     }
 }

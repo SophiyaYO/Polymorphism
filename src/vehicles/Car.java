@@ -5,8 +5,7 @@ public class Car extends Vehicle {
     private double litersPerKm;
 
     public Car(double fuelQuantity, double litersPerKm) {
-        this.setFuelQuantity(fuelQuantity);
-        this.setFuelConsumption(litersPerKm);
+       super(fuelQuantity, litersPerKm);
     }
 
     @Override
@@ -19,14 +18,14 @@ public class Car extends Vehicle {
         this.litersPerKm = fuelConsumption + 0.9;
     }
 
+
     @Override
-    protected double drivenDistance() {
-
-
+    public String drivenDistance(double distance) {
+        return super.drivenDistance(distance);
     }
 
     @Override
     protected double refueledLiters() {
-
+        return 0;
     }
 }

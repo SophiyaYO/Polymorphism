@@ -15,18 +15,6 @@ public abstract class Vehicle {
         return this.fuelQuantity;
     }
 
-    public void setFuelQuantity(double fuelQuantity) {
-        this.fuelQuantity = fuelQuantity;
-    }
-
-    public double getFuelConsumption() {
-        return this.fuelConsumption;
-    }
-
-    public void setFuelConsumption(double fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
-    }
-
     public String drivenDistance(double distance) {
         String output = null;
 

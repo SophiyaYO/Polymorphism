@@ -17,14 +17,15 @@ public class Main {
 
         Vehicle car = produceVehicle(reader.readLine().split("\\s+"));
         Vehicle truck = produceVehicle(reader.readLine().split("\\s+"));
+        Vehicle bus = produceVehicle(reader.readLine().split("\\s+"));
 
         Map<String, Vehicle> vehicles = new HashMap<>();
 
         vehicles.putIfAbsent("Car", car);
         vehicles.putIfAbsent("Truck", truck);
+        vehicles.putIfAbsent("Bus", bus);
 
         int n = Integer.parseInt(reader.readLine());
-
 
         while (n-- > 0) {
             String[] tokens = reader.readLine().split("\\s+");
@@ -40,7 +41,7 @@ public class Main {
                 vehicles.get(tokens[1]).refueledLiters(Double.parseDouble(tokens[2]));
 
             } else if (tokens[0].equalsIgnoreCase("driveEmpty")) {
-                vehicles.get(tokens[1]).setAirConditionIsOn(tokens[0]);
+                vehicles.get(tokens[1]).setAirConditionIsOn();
             }
 
             if (output != null) {
@@ -56,7 +57,7 @@ public class Main {
                 );
     }
 
-    public static Vehicle produceVehicle(String[] data) {
+    private static Vehicle produceVehicle(String[] data) {
 
         Vehicle vehicle = null;
 
@@ -65,23 +66,23 @@ public class Main {
                     new Car(
                             Double.parseDouble(data[1]),
                             Double.parseDouble(data[2]),
-                            Double.parseDouble(data[3]),
-                            data[0]);
+                            Double.parseDouble(data[3])
+                            );
 
         } else if (data[0].equalsIgnoreCase("truck")) {
             vehicle =
                     new Truck(
                             Double.parseDouble(data[1]),
                             Double.parseDouble(data[2]),
-                            Double.parseDouble(data[3]),
-                            data[0]);
+                            Double.parseDouble(data[3])
+                           );
 
         } else if (data[0].equalsIgnoreCase("Bus")) {
             vehicle =
                     new Bus(Double.parseDouble(data[1]),
                             Double.parseDouble(data[2]),
-                            Double.parseDouble(data[3]),
-                            data[0]);
+                            Double.parseDouble(data[3])
+                           );
         }
 
         return vehicle;

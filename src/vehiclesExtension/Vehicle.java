@@ -20,11 +20,9 @@ public abstract class Vehicle {
     }
 
     public void setFuelQuantity(double fuelQuantity) {
-        if (fuelQuantity >= 0) {
-            this.fuelQuantity = fuelQuantity;
-        } else {
-            System.out.println(("Fuel must be a positive number"));
-        }
+        this.fuelQuantity = fuelQuantity;
+
+
     }
 
     protected void setFuelConsumption(double fuelConsumption) {
@@ -35,7 +33,7 @@ public abstract class Vehicle {
         }
     }
 
-    private void setAirConditionIsOn() {
+    public void setAirConditionIsOn() {
         this.airConditionIsOn = true;
     }
 
@@ -67,7 +65,12 @@ public abstract class Vehicle {
 
     public void refueledLiters(double fuel) {
         if (this.fuelQuantity + fuel <= this.tankCapacity) {
-            this.fuelQuantity += fuel;
+            if (fuel > 0) {
+                this.fuelQuantity += fuel;
+            } else {
+                System.out.println(("Fuel must be a positive number"));
+            }
+
         } else {
             System.out.println(("Cannot fit fuel in tank"));
         }

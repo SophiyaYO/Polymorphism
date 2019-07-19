@@ -1,17 +1,16 @@
 package vehicles;
 
 public class Truck extends Vehicle {
+    private static final double ADDITIONAL_CONSUMPTION = 1.6;
+
     public Truck(double fuelQuantity, double fuelConsumption) {
-        super(fuelQuantity, fuelConsumption);
+        super(fuelQuantity, fuelConsumption + ADDITIONAL_CONSUMPTION);
     }
 
-    @Override
-    protected double refueledLiters() {
-        return 0;
-    }
 
     @Override
-    public String drivenDistance(double distance) {
-        return super.drivenDistance(distance);
+    public void refueledLiters(double fuel) {
+        super.refueledLiters(fuel * 0.95);
     }
+
 }

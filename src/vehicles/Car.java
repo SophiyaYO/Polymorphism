@@ -1,31 +1,10 @@
 package vehicles;
 
 public class Car extends Vehicle {
-    private double fuelQuantity;
-    private double litersPerKm;
+    private static final double ADDITIONAL_CONSUMPTION = 0.9;
 
     public Car(double fuelQuantity, double litersPerKm) {
-       super(fuelQuantity, litersPerKm);
+       super(fuelQuantity, litersPerKm + ADDITIONAL_CONSUMPTION);
     }
 
-    @Override
-    public void setFuelQuantity(double fuelQuantity) {
-        this.fuelQuantity = fuelQuantity;
-    }
-
-    @Override
-    public void setFuelConsumption(double fuelConsumption) {
-        this.litersPerKm = fuelConsumption + 0.9;
-    }
-
-
-    @Override
-    public String drivenDistance(double distance) {
-        return super.drivenDistance(distance);
-    }
-
-    @Override
-    protected double refueledLiters() {
-        return 0;
-    }
 }

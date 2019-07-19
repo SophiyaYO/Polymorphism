@@ -49,5 +49,14 @@ public abstract class Vehicle {
         return output;
     }
 
-    protected abstract double refueledLiters();
+    public void refueledLiters(double fuel) {
+        this.fuelQuantity += fuel;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s: %.2f",
+                this.getClass().getSimpleName(),
+                this.getFuelQuantity());
+    }
 }

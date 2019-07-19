@@ -1,9 +1,15 @@
 package vehicles;
 
+import java.text.DecimalFormat;
+
 public abstract class Vehicle {
     private double fuelQuantity;
-    private double litersPerKm;
+    private double fuelConsumption;
 
+    protected Vehicle(double fuelQuantity, double fuelConsumption) {
+        this.fuelQuantity = fuelQuantity;
+        this.fuelConsumption = fuelConsumption;
+    }
 
     public double getFuelQuantity() {
         return this.fuelQuantity;
@@ -13,15 +19,35 @@ public abstract class Vehicle {
         this.fuelQuantity = fuelQuantity;
     }
 
-    public double getLitersPerKm() {
-        return this.litersPerKm;
+    public double getFuelConsumption() {
+        return this.fuelConsumption;
     }
 
-    public void setLitersPerKm(double litersPerKm) {
-        this.litersPerKm = litersPerKm;
+    public void setFuelConsumption(double fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
     }
 
-    protected abstract void drivenDistance();
+    public String drivenDistance(double distance) {
+        String output = null;
 
-    protected abstract void refueledLiters();
+        double fuelNeeded = distance * this.fuelConsumption;
+
+        if (fuelNeeded <= this.fuelQuantity) {
+            this.fuelQuantity -= fuelNeeded;
+
+            DecimalFormat pattern = new DecimalFormat("#.##");
+
+            output =
+                    String.format("%s travelled %s km",
+                            this.getClass().getSimpleName(),
+                            pattern.format(distance));
+        } else {
+            output = String.format("%s needs refueling",
+                    this.getClass().getSimpleName());
+        }
+
+        return output;
+    }
+
+    protected abstract double refueledLiters();
 }

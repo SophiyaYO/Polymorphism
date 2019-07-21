@@ -38,7 +38,7 @@ public class Main {
                 vehicles.get(tokens[1]).refueledLiters(Double.parseDouble(tokens[2]));
 
             } else if (tokens[0].equalsIgnoreCase("DriveEmpty")) {
-                output = vehicles.get(tokens[1]).drivenDistance(Double.parseDouble(tokens[2]));
+                output = vehicles.get(tokens[1]).drivenDistanceEmpty(Double.parseDouble(tokens[2]));
 
             }
 

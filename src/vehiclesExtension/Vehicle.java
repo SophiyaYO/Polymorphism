@@ -26,6 +26,10 @@ public abstract class Vehicle {
         }
     }
 
+    public double getFuelConsumption() {
+        return this.fuelConsumption;
+    }
+
     public void setFuelQuantity(double fuelQuantity) {
         if (fuelQuantity < 0) {
             System.out.println("Fuel must be a positive number");
@@ -83,4 +87,6 @@ public abstract class Vehicle {
                 this.getClass().getSimpleName(),
                 this.getFuelQuantity());
     }
+
+    public abstract String drivenDistanceEmpty(double distance);
 }

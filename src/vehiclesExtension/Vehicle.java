@@ -4,27 +4,18 @@ import java.text.DecimalFormat;
 
 public abstract class Vehicle {
     private double fuelQuantity;
-    public boolean airConditionIsOn;
-    protected double fuelConsumption;
+    private boolean airConditionIsOn;
+    private double fuelConsumption;
     private double additionalConsumption;
     private double tankCapacity;
 
     protected Vehicle(double fuelQuantity, double fuelConsumption
-            , double additionalConsumption, double tankCapacity, String drive) {
-
-        this.setFuelQuantity(fuelQuantity);
-        this.setAirConditionIsOn(drive);
+            , double additionalConsumption, double tankCapacity) {
+        this.fuelQuantity = fuelQuantity;
+        this.setAirConditionIsOn();
         this.additionalConsumption = additionalConsumption;
         this.setFuelConsumption(fuelConsumption);
         this.tankCapacity = tankCapacity;
-    }
-
-    public void setFuelQuantity(double fuelQuantity) {
-        if (fuelQuantity >= 0) {
-            this.fuelQuantity = fuelQuantity;
-        } else {
-            System.out.println(("Fuel must be a positive number"));
-        }
     }
 
     protected void setFuelConsumption(double fuelConsumption) {
@@ -35,13 +26,8 @@ public abstract class Vehicle {
         }
     }
 
-    protected void setAirConditionIsOn(String drive) {
-        if (drive.equalsIgnoreCase("drive")) {
-            this.airConditionIsOn = true;
-        } else {
-            this.airConditionIsOn = false;
-
-        }
+    private void setAirConditionIsOn() {
+        this.airConditionIsOn = true;
     }
 
     public double getFuelQuantity() {
@@ -71,12 +57,7 @@ public abstract class Vehicle {
     }
 
     public void refueledLiters(double fuel) {
-        if (this.fuelQuantity + fuel <= this.tankCapacity) {
-            this.fuelQuantity += fuel;
-        } else {
-            System.out.println(("Cannot fit fuel in tank"));
-        }
-
+        this.fuelQuantity += fuel;
     }
 
     @Override

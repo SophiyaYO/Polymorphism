@@ -66,11 +66,31 @@ You won` t need any special software, these are problems which helps you acquain
  ****************
  ****************
  
- <details>
- <summary>01. Vehicle</summary>
+<details>
+ <summary>Problem 01. Vehicle</summary>
  
   - This is the [Description :scroll:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehicles/DESCRIPTION.md#math-operation)
  
   - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehicles)
   
-  </details>
+ </details>
+  
+  
+ <details>
+   <summary>Problem 2.	Vehicles Extension</summary>
+   
+   - This is the [Description :scroll:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehiclesExtended/DESCRIPTION.md#math-operation)
+   
+   - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehiclesExtended)
+    
+   </details>
+   
+ 
+<details>
+   <summary>Problem 3.	Wild Farm</summary>
+   
+   - This is the [Description :scroll:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/wildFarm/DESCRIPTION.md#math-operation)
+   
+   - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/wildFarm)
+    
+</details>

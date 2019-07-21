@@ -10,6 +10,10 @@ public abstract class Animal {
         this.animalName = animalName;
         this.animalType = animalType;
         this.animalWeight = animalWeight;
+        this.setFoodEaten(foodEaten);
+    }
+
+    public void setFoodEaten(Integer foodEaten) {
         this.foodEaten = foodEaten;
     }
 

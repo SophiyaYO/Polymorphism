@@ -51,6 +51,7 @@ public class Main {
                         foodList.remove(0);
 
                         break;
+
                     case "Zebra":
                         animals.putIfAbsent("Zebra",
                                 produceAnimal(animalTokens, foodList));
@@ -59,13 +60,31 @@ public class Main {
                                 produceAnimal(animalTokens, foodList));
 
                         foodList.remove(0);
+
                         break;
+
                     case "Cat":
+                        animals.putIfAbsent("Cat",
+                                produceAnimal(animalTokens, foodList));
+
+                        animals.put("Cat",
+                                produceAnimal(animalTokens, foodList));
+
+                        foodList.remove(0);
 
                         break;
+
                     case "Tiger":
+                        animals.putIfAbsent("Tiger",
+                                produceAnimal(animalTokens, foodList));
+
+                        animals.put("Tiger",
+                                produceAnimal(animalTokens, foodList));
+
+                        foodList.remove(0);
 
                         break;
+
                 }
 
             }
@@ -101,9 +120,24 @@ public class Main {
                 break;
 
             case "Cat":
+                Animal cat = new Cat(
+                        tokens[1],
+                        tokens[0],
+                        Double.parseDouble(tokens[2]),
+                        foodQuantity,
+                        tokens[3],
+                        tokens[4]
+                );
 
                 break;
             case "Tiger":
+                Animal tiger = new Zebra(
+                        tokens[1],
+                        tokens[0],
+                        Double.parseDouble(tokens[2]),
+                        foodQuantity,
+                        tokens[3]
+                );
 
                 break;
         }

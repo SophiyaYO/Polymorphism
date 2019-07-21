@@ -31,12 +31,7 @@ public abstract class Vehicle {
     }
 
     public void setFuelQuantity(double fuelQuantity) {
-        if (fuelQuantity < 0) {
-            System.out.println("Fuel must be a positive number");
-        } else {
-            this.fuelQuantity = fuelQuantity;
-        }
-
+        this.fuelQuantity = fuelQuantity;
     }
 
     private void setAirConditionIsOn() {
@@ -74,10 +69,15 @@ public abstract class Vehicle {
     }
 
     public void refueledLiters(double fuel) {
-        if (this.getFuelQuantity() + fuel > this.getTankCapacity()) {
-            System.out.println("Cannot fit fuel in tank");
+        if (fuel > 0) {
+            if (this.getFuelQuantity() + fuel > this.getTankCapacity()) {
+                System.out.println("Cannot fit fuel in tank");
+            } else {
+                this.fuelQuantity += fuel;
+            }
         } else {
-            this.fuelQuantity += fuel;
+            System.out.println("Fuel must be a positive number");
+
         }
     }
 
@@ -88,7 +88,7 @@ public abstract class Vehicle {
                 this.getFuelQuantity());
     }
 
-    public  String drivenDistanceEmpty(double distance){
+    public String drivenDistanceEmpty(double distance) {
         String output;
 
         double fuelNeeded = distance * this.fuelConsumption;

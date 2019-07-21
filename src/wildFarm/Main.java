@@ -17,7 +17,13 @@ public class Main {
                         )
                 );
 
-        Map<String, Animal> animals = new LinkedHashMap<>();
+        Map<String, List <Animal>> animals = new LinkedHashMap<>();
+
+        animals.putIfAbsent("Mouse",new ArrayList<>());
+        animals.putIfAbsent("Zebra",new ArrayList<>());
+        animals.putIfAbsent("Cat",new ArrayList<>());
+        animals.putIfAbsent("Tiger",new ArrayList<>());
+
         List<Food> foodList = new ArrayList<>();
 
         int count = 0;
@@ -25,7 +31,7 @@ public class Main {
         while (!"end".equalsIgnoreCase(input = reader.readLine())) {
             count++;
 
-            if (count % 2 != 0) {
+            if (count % 2 == 0) {
                 String[] foodTokens = input.split("\\s+");
                 if (foodTokens[0].equalsIgnoreCase("Vegetable")) {
                     Food vegetable = new Vegetable(Integer.parseInt(foodTokens[1]));
@@ -34,7 +40,6 @@ public class Main {
                 } else {
                     Food meat = new Meat(Integer.parseInt(foodTokens[1]));
                     foodList.add(meat);
-
                 }
 
             } else {
@@ -42,56 +47,41 @@ public class Main {
 
                 switch (animalTokens[0]) {
                     case "Mouse":
-                        animals.putIfAbsent("Mouse",
-                                produceAnimal(animalTokens, foodList));
-
-                        animals.put("Mouse",
-                                produceAnimal(animalTokens, foodList));
+                        animals.get("Mouse").add(produceAnimal(animalTokens, foodList));
 
                         foodList.remove(0);
 
                         break;
 
                     case "Zebra":
-                        animals.putIfAbsent("Zebra",
-                                produceAnimal(animalTokens, foodList));
-
-                        animals.put("Zebra",
-                                produceAnimal(animalTokens, foodList));
+                        animals.get("Zebra").add(produceAnimal(animalTokens, foodList));
 
                         foodList.remove(0);
 
                         break;
 
                     case "Cat":
-                        animals.putIfAbsent("Cat",
-                                produceAnimal(animalTokens, foodList));
-
-                        animals.put("Cat",
-                                produceAnimal(animalTokens, foodList));
+                        animals.get("Cat").add(produceAnimal(animalTokens, foodList));
 
                         foodList.remove(0);
 
                         break;
 
                     case "Tiger":
-                        animals.putIfAbsent("Tiger",
-                                produceAnimal(animalTokens, foodList));
-
-                        animals.put("Tiger",
-                                produceAnimal(animalTokens, foodList));
+                        animals.get("Tiger").add(produceAnimal(animalTokens, foodList));
 
                         foodList.remove(0);
 
                         break;
-
                 }
 
             }
         }
 
-        for (Map.Entry<String, Animal> kv : animals.entrySet()) {
-            System.out.println(kv.getValue().toString());
+        for (Map.Entry<String, List<Animal>> kv : animals.entrySet()) {
+            for (Animal animal : kv.getValue()) {
+                System.out.println(animal.toString());
+            }
         }
     }
 

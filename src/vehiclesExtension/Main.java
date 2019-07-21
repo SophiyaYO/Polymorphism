@@ -34,7 +34,7 @@ public class Main {
             String output = null;
             if (tokens[0].equalsIgnoreCase("drive")) {
                 output = vehicles.get(tokens[1]).drivenDistance(Double.parseDouble(tokens[2]));
-            } else if (tokens[0].equalsIgnoreCase("refuel")){
+            } else if (tokens[0].equalsIgnoreCase("refuel")) {
                 vehicles.get(tokens[1]).refueledLiters(Double.parseDouble(tokens[2]));
 
             } else if (tokens[0].equalsIgnoreCase("DriveEmpty")) {
@@ -79,7 +79,9 @@ public class Main {
                             Double.parseDouble(data[2]),
                             Double.parseDouble(data[3]));
 
+        }
         return vehicle;
 
     }
+
 }

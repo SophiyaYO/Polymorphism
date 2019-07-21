@@ -79,9 +79,9 @@ You won` t need any special software, these are problems which helps you acquain
  <details>
    <summary>Problem 2.	Vehicles Extension</summary>
    
-   - This is the [Description :scroll:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehiclesExtended/DESCRIPTION.md#math-operation)
+   - This is the [Description :scroll:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehiclesExtension/DESCRIPTION.md#math-operation)
    
-   - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehiclesExtended)
+   - This is the [Solution :cherries:](https://github.com/SophiyaYO/Polymorphism/blob/master/src/vehiclesExtension)
     
    </details>
    

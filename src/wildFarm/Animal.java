@@ -46,7 +46,7 @@ public abstract class Animal {
     public String toString() {
         DecimalFormat df = new DecimalFormat("#.##");
 
-        return String.format("%s[%s, %s, %s, %d]",
+        return String.format("%s[%s, %s, %d]",
                 this.getClass().getSimpleName(),
                 this.getAnimalName(),
                 df.format(this.getAnimalWeight()),

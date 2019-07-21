@@ -14,23 +14,12 @@ public class Main {
                         )
                 );
 
-        Map<String, List<Animal>> animals = new HashMap<>();
         List<Animal> animalList = new ArrayList<>();
-
-        animals.putIfAbsent("Mouse", new ArrayList<>());
-        animals.putIfAbsent("Zebra", new ArrayList<>());
-        animals.putIfAbsent("Cat", new ArrayList<>());
-        animals.putIfAbsent("Tiger", new ArrayList<>());
-
         List<Food> foodList = new ArrayList<>();
 
-        int count = 0;
         String input;
         while (!"end".equalsIgnoreCase(input = reader.readLine())) {
-            count++;
-
             String[] animalTokens = input.split("\\s+");
-
             String[] foodTokens = reader.readLine().split("\\s+");
 
             if (foodTokens[0].equalsIgnoreCase("Vegetable")) {
@@ -44,46 +33,28 @@ public class Main {
 
             switch (animalTokens[0]) {
                 case "Mouse":
-//                    animals.get("Mouse").add(produceAnimal(animalTokens, foodList));
-
                     animalList.add(produceAnimal(animalTokens, foodList));
-
                     foodList.remove(0);
 
                     break;
 
                 case "Zebra":
-//                    animals.get("Zebra").add(produceAnimal(animalTokens, foodList));
                     animalList.add(produceAnimal(animalTokens, foodList));
-
                     foodList.remove(0);
-
                     break;
 
                 case "Cat":
-//                    animals.get("Cat").add(produceAnimal(animalTokens, foodList));
-
                     animalList.add(produceAnimal(animalTokens, foodList));
-
                     foodList.remove(0);
-
                     break;
 
                 case "Tiger":
-//                    animals.get("Tiger").add(produceAnimal(animalTokens, foodList));
                     animalList.add(produceAnimal(animalTokens, foodList));
-
                     foodList.remove(0);
 
                     break;
             }
         }
-
-//        for (Map.Entry<String, List<Animal>> kv : animals.entrySet()) {
-//            for (Animal animal : kv.getValue()) {
-//                toStringPrint(animal);
-//            }
-//        }
 
         for (Animal animal : animalList) {
             toStringPrint(animal);
@@ -106,6 +77,7 @@ public class Main {
                 );
 
                 printSound(mouse);
+                mouse.eat(food.get(0));
 
                 toStringPrint(mouse);
                 animals.add(mouse);
@@ -121,6 +93,7 @@ public class Main {
                         tokens[3]
                 );
                 printSound(zebra);
+                zebra.eat(food.get(0));
 
                 animals.add(zebra);
 

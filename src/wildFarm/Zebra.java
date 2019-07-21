@@ -14,10 +14,10 @@ public class Zebra extends Mammal {
     @Override
     protected void eat(Food food) {
         if (food.getClass().getSimpleName().equalsIgnoreCase("Meat")) {
-            System.out.println("Zebra are not eating that type of food!");
+            System.out.println("Zebras are not eating that type of food!");
             super.setFoodEaten(0);
         } else {
-            super.eat(food);
+            super.setFoodEaten(food.getQuantity());
         }
     }
 }

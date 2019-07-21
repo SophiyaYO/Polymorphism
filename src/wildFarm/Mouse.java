@@ -15,7 +15,7 @@ public class Mouse extends Mammal {
     @Override
     protected void eat(Food food) {
         if (food.getClass().getSimpleName().equalsIgnoreCase("Meat")) {
-            System.out.println("Mouses are not eating that type of food!");
+            System.out.println("Mice are not eating that type of food!");
             super.setFoodEaten(0);
         } else {
             super.setFoodEaten(food.getQuantity());

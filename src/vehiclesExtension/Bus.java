@@ -13,7 +13,7 @@ public class Bus extends Vehicle {
     public String drivenDistance(double distance) {
         String output;
 
-        double fuelNeeded = distance * super.getFuelConsumption() + 1.4;
+        double fuelNeeded = distance * super.getFuelConsumption() * 1.4;
 
         if (fuelNeeded <= super.getFuelQuantity()) {
             super.setFuelQuantity(super.getFuelQuantity()- fuelNeeded);

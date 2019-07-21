@@ -2,7 +2,7 @@
 
 Your task is to **create a class hierarchy** like the picture below. All the classes _**except Vegetable**_, **Meat, Mouse, Tiger, Cat & Zebra should be abstract.**
 
-!(picME)[src/vehiclesExtension/uml.png]
+!(picME)[src/wildFarm/uml.png]
 
 Input should be read from the console. Every even line will contain information about the Animal in following format:
 {AnimalType} {AnimalName} {AnimalWeight} {AnimalLivingRegion} \[{CatBreed} = Only if its cat]

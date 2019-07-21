@@ -28,8 +28,8 @@ public class Cat extends Felime {
 
         return String.format("%s[%s, %s, %s, %s, %d]",
                 super.getClass().getSimpleName(),
-                this.getBreed(),
                 super.getAnimalName(),
+                this.getBreed(),
                 df.format(super.getAnimalWeight()),
                 this.getLivingRegion(),
                 super.getFoodEaten()).trim();

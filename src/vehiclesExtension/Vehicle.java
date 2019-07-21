@@ -88,5 +88,25 @@ public abstract class Vehicle {
                 this.getFuelQuantity());
     }
 
-    public abstract String drivenDistanceEmpty(double distance);
+    public  String drivenDistanceEmpty(double distance){
+        String output;
+
+        double fuelNeeded = distance * this.fuelConsumption;
+
+        if (fuelNeeded <= this.fuelQuantity) {
+            this.fuelQuantity -= fuelNeeded;
+
+            DecimalFormat pattern = new DecimalFormat("#.##");
+
+            output =
+                    String.format("%s travelled %s km",
+                            this.getClass().getSimpleName(),
+                            pattern.format(distance));
+        } else {
+            output = String.format("%s needs refueling",
+                    this.getClass().getSimpleName());
+        }
+
+        return output;
+    }
 }

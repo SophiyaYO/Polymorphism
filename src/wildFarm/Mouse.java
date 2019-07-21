@@ -9,7 +9,7 @@ public class Mouse extends Mammal {
 
     @Override
     protected void makeSound() {
-
+        System.out.println("SQUEEEAAAK!");
     }
 
     @Override

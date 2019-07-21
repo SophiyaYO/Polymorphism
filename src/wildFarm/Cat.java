@@ -11,5 +11,8 @@ public class Cat extends Felime {
         this.breed = breed;
     }
 
-
+    @Override
+    protected void makeSound() {
+        System.out.println("Meowwww");
+    }
 }

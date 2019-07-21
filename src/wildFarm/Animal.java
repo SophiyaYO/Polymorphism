@@ -18,5 +18,11 @@ public abstract class Animal {
     }
 
     protected abstract void makeSound();
+
     protected abstract void eat(Food food);
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

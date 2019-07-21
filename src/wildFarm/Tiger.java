@@ -15,4 +15,9 @@ public class Tiger extends Felime {
             super.eat(food);
         }
     }
+
+    @Override
+    protected void makeSound() {
+        System.out.println("ROAAR!!!");
+    }
 }

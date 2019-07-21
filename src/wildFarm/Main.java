@@ -96,6 +96,8 @@ public class Main {
     private static Animal produceAnimal(String[] tokens, List<Food> food) {
         Integer foodQuantity = food.get(0).getQuantity();
 
+        List<Animal> animals = new ArrayList<>();
+
         switch (tokens[0]) {
             case "Mouse":
                 Animal mouse = new Mouse(
@@ -105,6 +107,8 @@ public class Main {
                         foodQuantity,
                         tokens[3]
                 );
+
+                animals.add(mouse);
 
                 break;
 
@@ -116,6 +120,8 @@ public class Main {
                         foodQuantity,
                         tokens[3]
                 );
+
+                animals.add(zebra);
 
                 break;
 
@@ -129,6 +135,8 @@ public class Main {
                         tokens[4]
                 );
 
+                animals.add(cat);
+
                 break;
             case "Tiger":
                 Animal tiger = new Zebra(
@@ -139,9 +147,10 @@ public class Main {
                         tokens[3]
                 );
 
+                animals.add(tiger);
                 break;
         }
 
-        return Animal;
+        return animals.get(animals.size()-1);
     }
 }

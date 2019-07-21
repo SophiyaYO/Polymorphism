@@ -12,7 +12,7 @@ public class Tiger extends Felime {
             System.out.println("Tigers are not eating that type of food!");
             super.setFoodEaten(0);
         } else {
-            super.eat(food);
+            super.setFoodEaten(food.getQuantity());
         }
     }
 

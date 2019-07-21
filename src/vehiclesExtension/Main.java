@@ -24,7 +24,7 @@ public class Main {
 
         vehicles.putIfAbsent("Car", car);
         vehicles.putIfAbsent("Truck", truck);
-        vehicles.putIfAbsent("Bus", truck);
+        vehicles.putIfAbsent("Bus", bus);
 
         int n = Integer.parseInt(reader.readLine());
 

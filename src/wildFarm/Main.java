@@ -34,26 +34,22 @@ public class Main {
             switch (animalTokens[0]) {
                 case "Mouse":
                     animalList.add(produceAnimal(animalTokens, foodList));
-                    foodList.remove(0);
-
                     break;
 
                 case "Zebra":
                     animalList.add(produceAnimal(animalTokens, foodList));
-                    foodList.remove(0);
                     break;
 
                 case "Cat":
                     animalList.add(produceAnimal(animalTokens, foodList));
-                    foodList.remove(0);
                     break;
 
                 case "Tiger":
                     animalList.add(produceAnimal(animalTokens, foodList));
-                    foodList.remove(0);
-
                     break;
             }
+            foodList.remove(0);
+
         }
 
         for (Animal animal : animalList) {
@@ -77,6 +73,7 @@ public class Main {
                 );
 
                 printSound(mouse);
+
                 mouse.eat(food.get(0));
 
                 animals.add(mouse);
@@ -92,6 +89,7 @@ public class Main {
                         tokens[3]
                 );
                 printSound(zebra);
+
                 zebra.eat(food.get(0));
 
                 animals.add(zebra);

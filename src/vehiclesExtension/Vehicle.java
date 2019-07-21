@@ -11,7 +11,7 @@ public abstract class Vehicle {
 
     protected Vehicle(double fuelQuantity, double fuelConsumption
             , double additionalConsumption, double tankCapacity) {
-        this.fuelQuantity = fuelQuantity;
+        this.setFuelQuantity(fuelQuantity);
         this.setAirConditionIsOn();
         this.additionalConsumption = additionalConsumption;
         this.setFuelConsumption(fuelConsumption);
@@ -26,12 +26,25 @@ public abstract class Vehicle {
         }
     }
 
+    public void setFuelQuantity(double fuelQuantity) {
+        if (fuelQuantity < 0) {
+            System.out.println("Fuel must be a positive number");
+        } else {
+            this.fuelQuantity = fuelQuantity;
+        }
+
+    }
+
     private void setAirConditionIsOn() {
         this.airConditionIsOn = true;
     }
 
     public double getFuelQuantity() {
         return this.fuelQuantity;
+    }
+
+    public double getTankCapacity() {
+        return this.tankCapacity;
     }
 
     public String drivenDistance(double distance) {
@@ -57,7 +70,11 @@ public abstract class Vehicle {
     }
 
     public void refueledLiters(double fuel) {
-        this.fuelQuantity += fuel;
+        if (this.getFuelQuantity() + fuel > this.getTankCapacity()) {
+            System.out.println("Cannot fit fuel in tank");
+        } else {
+            this.fuelQuantity += fuel;
+        }
     }
 
     @Override

@@ -1,5 +1,7 @@
 package wildFarm;
 
+import java.text.DecimalFormat;
+
 public abstract class Animal {
     private String animalName;
     private String animalType;
@@ -13,6 +15,22 @@ public abstract class Animal {
         this.setFoodEaten(foodEaten);
     }
 
+    public String getAnimalName() {
+        return this.animalName;
+    }
+
+    public String getAnimalType() {
+        return this.animalType;
+    }
+
+    public Double getAnimalWeight() {
+        return this.animalWeight;
+    }
+
+    public Integer getFoodEaten() {
+        return this.foodEaten;
+    }
+
     public void setFoodEaten(Integer foodEaten) {
         this.foodEaten = foodEaten;
     }
@@ -23,6 +41,12 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return super.toString();
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        return String.format("%s[%s, %s, %s, %d]",
+                this.getClass().getSimpleName(),
+                this.getAnimalName(),
+                df.format(this.getAnimalWeight()),
+                this.getFoodEaten()).trim();
     }
 }

@@ -88,8 +88,10 @@ public class Main {
                 }
 
             }
+        }
 
-
+        for (Map.Entry<String, Animal> kv : animals.entrySet()) {
+            System.out.println(kv.getValue().toString());
         }
     }
 

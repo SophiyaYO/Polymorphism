@@ -79,7 +79,6 @@ public class Main {
                 printSound(mouse);
                 mouse.eat(food.get(0));
 
-                toStringPrint(mouse);
                 animals.add(mouse);
 
                 break;
